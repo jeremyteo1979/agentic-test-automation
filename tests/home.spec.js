@@ -3,8 +3,10 @@ const { test, expect } = require("@playwright/test");
 test("homepage loads and supports the first plan interaction", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page.getByRole("heading", { name: "$0 today. 0 worry with 5G Unlimited+ Plans." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Available online and in-stores from 23 April - 5 May." })).toBeVisible();
   await expect(page.getByTestId("mega-menu")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Curated offers for your different needs." })).toBeVisible();
+  await expect(page.getByTestId("trending-devices")).toContainText("iPhone 17e");
 
   await page.getByTestId("hero-primary-cta").click();
   await expect(page.getByTestId("mobile-plan-card")).toBeVisible();
