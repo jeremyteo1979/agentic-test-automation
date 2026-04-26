@@ -31,6 +31,10 @@ Run tests:
 npm test
 ```
 
+## Change Workflow
+
+Every requested change should be made on a branch and associated with a pull request before it reaches `main`.
+
 ## Workspace
 
 - `index.html` is the Vite app shell.
