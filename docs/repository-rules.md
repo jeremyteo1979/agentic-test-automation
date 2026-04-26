@@ -12,6 +12,7 @@ main
 
 ## Required Rules
 
+- Every requested change must be associated with a pull request.
 - Pull request required before merging.
 - At least one approval required before merging.
 - Dismiss stale pull request approvals when new commits are pushed.
@@ -41,6 +42,16 @@ That workflow runs:
 ```bash
 npm test
 ```
+
+## Working Agreement
+
+For every change request:
+
+- Create a short-lived branch from `main`.
+- Make and test the change on that branch.
+- Push the branch and open a pull request.
+- Keep the pull request linked to the requested change in the PR title, description, or comments.
+- Do not merge until the required approval and status checks are satisfied.
 
 ## GitHub Setup Checklist
 
